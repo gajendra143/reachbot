@@ -1,0 +1,15 @@
+{% extends 'page2.html' %}
+
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+<!--<h3>form example....</h3>-->
+<form action="" method="POST" novalidate> {% csrf_token %}
+{{ form | crispy }}
+    <input type="submit" value="submit" class="btn btn-success">
+</form>
+<br>
+{{msg}}
+<br>
+{% endblock %}

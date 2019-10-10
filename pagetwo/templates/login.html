@@ -1,0 +1,18 @@
+{% extends 'about.html' %}
+
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+<!--<h3>form example....</h3>-->
+<div id="about" class="about-area area-padding">
+<div class="container">
+<form action="" method="POST" novalidate> {% csrf_token %}
+{{ form | crispy }}
+    <input type="submit" value="submit" class="btn btn-success">
+</form>
+<br>
+{{msg}}
+<br>
+</div></div>
+{% endblock %}
